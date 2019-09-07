@@ -25,7 +25,7 @@
 
     <!-- One Piece Title -->
     <div id="title-bar" class="text-center rounded-lg mt-2 mb-2">
-        <img src="assets/images/badge.png" style="width:30vw" class="rounded" alt="...">
+        <img src="assets/images/badge.png" style="width:20vw" class="rounded" alt="...">
     </div>
 
     <!-- main-container -->
@@ -36,25 +36,28 @@
             </div>
             <!-- question -->
             <div id="question-body" class="col-md-9">
+                <h2 id="question-number"></h2><hr>
                 <p id="question" class="m-2 m-auto"></p>
             </div>–
         </div>
         <div class="row h-50">
-            <div class="col-md-2"></div>
-            <div id="answers-body" class="col-md-8 d-none">
+            <div class="col-md-3">
+                <h2 id="losses-count"></h2>
+            </div>
+            <div id="answers-body" class="col-md-6 d-none">
                 <button id="answer-a" type="button" class="answers btn btn-outline-dark w-100" answerName="a">Andrew</button><br>
                 <button id="answer-b" type="button" class="answers btn btn-outline-dark w-100" answerName="b">HAHA</button><br>
                 <button id="answer-c" type="button" class="answers btn btn-outline-dark w-100" answerName="c">LUCUS</button><br>
                 <button id="answer-d" type="button" class="answers btn btn-outline-dark w-100" answerName="d">WTY</button>
             </div>
-            <div id="answer-body" class="col-md-8">
-                <h3 id="congratulation">Press to start</h3> 
-                <p id="correctAnswer">ascsdvja dkjvbadvhbasidhvboahfbvaoihfbvpai</p>
+            <div id="answer-body" class="col-md-6">
+                <h3 id="answer-cg"></h3> 
+                <p id="answer-text"></p>
             </div>
         </div>
     </div>
 
-    <br><br><br><br>
+    <br><br>
     <footer class="bg-dark text-light text-center" style="height: 8vh; width:100%">
         <p>Copyright</p>
     </footer>
