@@ -6,4 +6,5 @@ body{
 .container{
     background-color: aliceblue;
     height: 65vh;
+    opacity: 0.9;
 }

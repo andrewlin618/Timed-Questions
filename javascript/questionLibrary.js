@@ -1,63 +1,64 @@
-var instruction = "这个游戏要怎么玩呢？？啊啊啊问的好啊！"
+var title = "海贼王趣味问答题"
+var instruction = "下面一共有10道关于海贼王的问题，答错3题则游戏结束"
 
 var qa1 = {
-    question:"Question 1",
-    answer:["answer1a","answer1b","answer1c","answer1d"],
-    correctAnswer:["a","xxxxxxxxxxxxxxxxxxxxxx"],
+    question:"绿藻头索大全名叫（ ）",
+    answer:['A.罗罗诺亚·绿藻','B.玛丽隔壁·绿藻', 'C.罗罗诺亚·索隆', 'D.萝莉诺亚·索隆'],
+    correctAnswer:["c","绿藻头索大全名叫（ 罗罗诺亚·索隆 ）"],
 }
 
 var qa2 = {
-    question: "Question 2",
-    answer:["answer2a","answer2b","answer2c","answer2d"],
-    correctAnswer:["b","xxxxxscvafbvadfbadfbxxxx"],
+    question: "罗最常使用的战术是（ ）",
+    answer:['A.外科手术', 'B.动感光波', 'C.屠宰场', 'D.剑术'],
+    correctAnswer:["c","罗最常使用的战术是（C.屠宰场 ）"],
 }
 
 var qa3 = {
-    question: "Question 3",
-    answer:["answer3a","answer3b","answer3c","answer3d"],
-    correctAnswer:["c","ssssssssssssssssx"],
+    question: "娜美最常穿什么类型的衣服（ ）",
+    answer:['A.比基尼', 'B.女仆装', 'C.学生服', 'D.公司白领装'],
+    correctAnswer:["a","娜美最常穿什么类型的衣服（ 比基尼 ）"],
 }
 
 var qa4 = {
-    question: "Question 5",
-    answer:["answer4a","answer4b","answer4c","answer4d"],
-    correctAnswer:["d","kkkkkkkkkkkxxx"],
+    question: "贝波是罗的（ ）（提示：贝波是一只白熊)",
+    answer:['A.仆人', 'B.伙伴', 'C.奴隶', 'D.管家'],
+    correctAnswer:["b","贝波是罗的（ 伙伴 ）"],
 }
 
 var qa5 = {
-    question: "Question 5",
-    answer:["answer4a","answer4b","answer4c","answer4d"],
-    correctAnswer:["d","kkkkkkkkkkkxxx"],
+    question: "路飞来自哪里（ ）",
+    answer:['A.红土大陆', 'B.北海', 'C.东海', 'D.南海'],
+    correctAnswer:["c","路飞来自哪里（ 东海 ）"],
 }
 
 var qa6 = {
-    question: "Question 6",
-    answer:["answer4a","answer4b","answer4c","answer4d"],
-    correctAnswer:["d","kkkkkkkkkkkxxx"],
+    question: "娜美的梦想是（ ）",
+    answer:['A.把世界的财富据为己有', 'B.成为路飞的老婆', 'C.绘制出完美的世界地图', 'D.永远欺负草帽三主力'　],
+    correctAnswer:["c","娜美的梦想是（ 绘制出完美的世界地图 ）"],
 }
 
 var qa7 = {
-    question: "Question 7",
-    answer:["answer4a","answer4b","answer4c","answer4d"],
-    correctAnswer:["d","kkkkkkkkkkkxxx"],
+    question: "艾斯背后的图纹是什么（ ）",
+    answer:['A.自己设计的图案', 'B.白胡子海贼团标志', 'C.家族图腾', 'D.尾田大师涂鸦所致'],
+    correctAnswer:["b", "艾斯背后的图纹是什么（ 白胡子海贼团标志 ）"],
 }
 
 var qa8 = {
-    question: "Question 8",
-    answer:["answer4a","answer4b","answer4c","answer4d"],
-    correctAnswer:["d","kkkkkkkkkkkxxx"],
+    question: "基德海贼船的副船长是（ ）",
+    answer:['A.夜叉', 'B.丧失', 'C.佩金', 'D.杀戮武人基拉'],
+    correctAnswer:["d","基德海贼船的副船长是（ 杀戮武人基拉 ）"],
 }
 
 var qa9 = {
-    question: "Question 9",
-    answer:["answer4a","answer4b","answer4c","answer4d"],
-    correctAnswer:["d","kkkkkkkkkkkxxx"],
+    question: "罗的组建海贼团叫（ ）海贼团",
+    answer:['A.方块', 'B.梅花', 'C.红心', 'D.黑桃'],
+    correctAnswer:["c","罗的组建海贼团叫（ 红心 ）海贼团"],
 }
 
 var qa10 = {
-    question: "Question 10",
-    answer:["answer4a","answer4b","answer4c","answer4d"],
-    correctAnswer:["d","kkkkkkkkkkkxxx"],
+    question: "在动漫中，（ ）一直暗恋着路飞（ ）",
+    answer:['A.娜美', 'B.罗宾', 'C.白星', 'D.女帝'],
+    correctAnswer:["d","在动漫中，（ 女帝 ）一直暗恋着路飞"],
 }
 
 
