@@ -37,19 +37,21 @@
             <!-- question -->
             <div id="question-body" class="col-md-9">
                 <p id="question" class="m-2 m-auto"></p>
-            </div>
+            </div>–
         </div>
-        <div id="answers-body" class="row h-50">
+        <div class="row h-50">
             <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <button id="answer-a" type="button" class="btn btn-outline-dark w-100">Andrew</button><br>
-                <button id="answer-b" type="button" class="btn btn-outline-dark w-100">HAHA</button><br>
-                <button id="answer-c" type="button" class="btn btn-outline-dark w-100">LUCUS</button><br>
-                <button id="answer-d" type="button" class="btn btn-outline-dark w-100">WTY</button>
+            <div id="answers-body" class="col-md-8 d-none">
+                <button id="answer-a" type="button" class="answers btn btn-outline-dark w-100" answerName="a">Andrew</button><br>
+                <button id="answer-b" type="button" class="answers btn btn-outline-dark w-100" answerName="b">HAHA</button><br>
+                <button id="answer-c" type="button" class="answers btn btn-outline-dark w-100" answerName="c">LUCUS</button><br>
+                <button id="answer-d" type="button" class="answers btn btn-outline-dark w-100" answerName="d">WTY</button>
+            </div>
+            <div id="answer-body" class="col-md-8">
+                <h3 id="congratulation">Press to start</h3> 
+                <p id="correctAnswer">ascsdvja dkjvbadvhbasidhvboahfbvaoihfbvpai</p>
             </div>
         </div>
-
-
     </div>
 
     <br><br><br><br>
@@ -58,8 +60,9 @@
     </footer>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="javascript/questionLibrary.js""></script>
-    <script src="javascript/mainGame.js"></script>
+    <script src="javascript/questionLibrary.js"></script>
+    <script src="javascript/basicGameFunction.js"></script>
+    <script src=" javascript/mainGame.js"> </script>
 </body>
 
 </html>
