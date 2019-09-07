@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Timed Question</title>
+</head>
+
+<body>
+    <header>
+        <!-- Image and text -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                One Piece Time Question
+            </a>
+        </nav>
+    </header>
+
+    <!-- One Piece Title -->
+    <div id="title-bar" class="text-center rounded-lg mt-2 mb-2">
+        <img src="assets/images/badge.png" style="width:30vw" class="rounded" alt="...">
+    </div>
+
+    <!-- main-container -->
+    <div id="main-container" class="container rounded-lg">
+        <div class="row h-50">
+            <!-- timer -->
+            <div id="timer" class="col-md-3">
+            </div>
+            <!-- question -->
+            <div id="question-body" class="col-md-9">
+                <p id="question" class="m-2 m-auto"></p>
+            </div>
+        </div>
+        <div id="answers-body" class="row h-50">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <button id="answer-a" type="button" class="btn btn-outline-dark w-100">Andrew</button><br>
+                <button id="answer-b" type="button" class="btn btn-outline-dark w-100">HAHA</button><br>
+                <button id="answer-c" type="button" class="btn btn-outline-dark w-100">LUCUS</button><br>
+                <button id="answer-d" type="button" class="btn btn-outline-dark w-100">WTY</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <br><br><br><br>
+    <footer class="bg-dark text-light text-center" style="height: 8vh; width:100%">
+        <p>Copyright</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/questionLibrary.js""></script>
+    <script src="javascript/mainGame.js"></script>
+</body>
+
+</html>

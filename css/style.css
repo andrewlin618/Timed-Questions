@@ -1,3 +1,9 @@
 body{
-    background-color: salmon;
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover;
+}
+
+.container{
+    background-color: aliceblue;
+    height: 60vh;
 }
