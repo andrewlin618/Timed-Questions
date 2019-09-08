@@ -6,11 +6,16 @@ var answerNowB = "";
 var answerNowC = "";
 var answerNowD = "";
 var answerText = "";
-var started = false;
+
+
 var win = 0;
 var losses = 0;
 var indexNow = 1;
-var timer;
+
+var started = false;
+var timerRunning = false;
+
+var intervalId;
 
 //Game instruction page;
 $("#answer-cg").text(title)
@@ -24,9 +29,8 @@ setTimeout(function () {
 
 
 $(".answers").on("click", function () {
-    setTimeout(function(){
-        window.clearInterval;
-    },TIMEOUT)
+    clearInterval(intervalId);
+    timerReset();
 
     //Already win or lose;
     if (indexNow == 11 || losses == 3) {
@@ -39,9 +43,8 @@ $(".answers").on("click", function () {
         correct();
     } else {
         wrong();
-
-    //You lose;
-        if (losses == 3){
+        //You lose;
+        if (losses == 3) {
             setTimeout(function () {
                 gameOver();
             }, TIMEOUT);
@@ -53,12 +56,14 @@ $(".answers").on("click", function () {
     indexNow++;
     if (indexNow == 11) {
         setTimeout(function () {
+            clearInterval(intervalId);
             showResult();
         }, TIMEOUT);
 
-    //Next question;
+        //Next question;
     } else {
         setTimeout(function () {
+            clearInterval(intervalId);
             setGame(indexNow);
         }, TIMEOUT);
     }

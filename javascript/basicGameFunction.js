@@ -1,5 +1,6 @@
+var time = 15;
+
 function setGame(index) {
-    timer = timerRestart();
     timerRestart();
     $("#answer-body").addClass("d-none");
     $("#answers-body").removeClass("d-none");
@@ -21,32 +22,52 @@ function setGame(index) {
 }
 
 function timerRestart() {
-    var time = 15;
-    $("#timer").text("00:" + time);
-    setInterval(function () {
-        time--;
-        if (time >= 10) {
-            $("#timer").text("00:" + time);
-        } else if (time >= 0) {
-            $("#timer").text("00:0" + time);
-        } else {
-            wrong();
-            indexNow++;
-            window.clearInterval();
-            if (losses == 3) {
-                setTimeout(function () {
-                    gameOver();
-                }, TIMEOUT);
-                return;
-            } else {
-                setTimeout(function () {
-                    setGame(indexNow);
-                }, TIMEOUT);
-            }
-        }
-    }, 1000);
-
+    if (!timerRunning) {
+        $("#timer").text("00 : 15");
+        intervalId = setInterval(timerRun, 1000);
+        timerRunning = true;
+    }
 }
+ÏÏ
+
+function timerReset() {
+    clearInterval(intervalId);
+    time = 15;
+    timerRunning = false;
+}
+
+
+function timerRun() {
+    time--;
+    if (time > 9) {
+        $("#timer").text("00 : " + time);
+    } else if (time >= 0) {
+        $("#timer").text("00 : 0" + time);
+    } else {
+        wrong();
+        if (losses == 3) {
+            setTimeout(function () {
+                gameOver();
+            }, TIMEOUT);
+            return;
+        }
+        //You win;
+        indexNow++;
+        if (indexNow == 11) {
+            setTimeout(function () {
+                showResult();
+            }, TIMEOUT);
+
+            //Next question;
+        } else {
+            setTimeout(function () {
+                setGame(indexNow);
+            }, TIMEOUT);
+        }
+
+    }
+}
+
 
 function correct() {
     $("#answers-body").addClass("d-none");
@@ -55,6 +76,7 @@ function correct() {
     $("#answer-cg").text("Congratulations!")
     win++;
     $("#losses-count").html("Wins : " + (indexNow - losses) + "<br>Losses : " + losses);
+    timerReset();
 }
 
 function wrong() {
@@ -64,15 +86,18 @@ function wrong() {
     $("#answer-cg").text("Sorry....!")
     losses++;
     $("#losses-count").html("Wins : " + (indexNow - losses) + "<br>Losses : " + losses);
+    timerReset();
 }
 
 function gameOver() {
     $("#answer-cg").text("You are not a fan of The One Piece!");
     $("#answer-text").text("Refresh to restart!");
+    timerReset();
 }
 
 function showResult() {
     $("#answer-cg").css("color", "green");
     $("#answer-cg").text("You are a fan of The One Piece!");
     $("#answer-text").text("Correct = " + (10 - losses));
+    timerReset();
 }
