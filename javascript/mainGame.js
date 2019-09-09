@@ -13,22 +13,27 @@ var indexNow = 1;
 
 var started = false;
 
-
 //Game instruction page;
 $("#answer-text").html(instruction);
 $("#timer").html("Timer<BR>00 : " + time);
 $("#losses-count").html("Correct : 0<br>Wrong : " + losses);
+$("#question-number").text("Game Start in 6 seconds");
 
 var count = 5;
 
-countDown();
+var intervalId1 = setInterval(function () {
+    if (count == 0) {
+        clearInterval(intervalId1);
+        setGame(indexNow);
+    } else {
+        $("#question-number").text("Game Start in " + count + " seconds");
+        count--;
+    }
+}, 1000);
 
 // clearInterval(countDown);
 
 //Start the game;
-setTimeout(function () {
-    setGame(indexNow);
-}, 2 * TIMEOUT);
 
 
 $(".answers").on("click", function () {
