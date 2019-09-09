@@ -31,13 +31,12 @@ var intervalId1 = setInterval(function () {
     }
 }, 1000);
 
-// clearInterval(countDown);
 
 //Start the game;
 
 
 $(".answers").on("click", function () {
-    clearInterval(intervalId);
+    clearInterval(intervalId2);
     timerReset();
 
     //Already win or lose;
