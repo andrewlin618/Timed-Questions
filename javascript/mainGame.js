@@ -1,4 +1,4 @@
-const TIMEOUT = 1000;
+const TIMEOUT = 3000;
 
 var questionNow = "";
 var answerNowA = "";
@@ -6,7 +6,6 @@ var answerNowB = "";
 var answerNowC = "";
 var answerNowD = "";
 var answerText = "";
-
 
 var win = 0;
 var losses = 0;
@@ -16,15 +15,20 @@ var started = false;
 
 
 //Game instruction page;
-$("#question-number").html(title)
 $("#answer-text").html(instruction);
 $("#timer").html("Timer<BR>00 : " + time);
 $("#losses-count").html("Correct : 0<br>Wrong : " + losses);
 
+var count = 5;
+
+countDown();
+
+// clearInterval(countDown);
+
 //Start the game;
 setTimeout(function () {
     setGame(indexNow);
-}, 3 * TIMEOUT);
+}, 2 * TIMEOUT);
 
 
 $(".answers").on("click", function () {

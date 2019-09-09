@@ -1,4 +1,3 @@
-var title = "【海贼王趣味问答题】"
 var instruction = "——下面一共有10道关于海贼王的问题，答错3题则游戏结束——"
 var celebrationWords = "You are  a fan of The One Piece!"
 var gameOverWords = "You are not a fan of The One Piece!";

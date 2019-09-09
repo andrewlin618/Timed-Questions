@@ -1,6 +1,9 @@
 var time = 15;
 var timerRunning = false;
-var intervalId;
+var counterRunning = false;
+
+var intervalId1;
+var intervalId2;
 
 function setGame(index) {
     timerRestart();
@@ -23,16 +26,33 @@ function setGame(index) {
     $("#answer-text").text(answerText);
 }
 
+function countDown() {
+    if (!counterRunning) {
+        $("#question-number").text("Game Start in " + count + " seconds");
+        intervalId1 = setInterval(function () {
+            if (count > 0) {
+                count--;
+                $("#question-number").text("Game Start in " + count + " seconds");
+            } else {
+                clearInterval(intervalId1);
+                count = 5;
+            }
+        },1000);
+        counterRunning = true;
+    }
+}
+
+
 function timerRestart() {
     if (!timerRunning) {
         $("#timer").html("Timer<BR>00 : " + time);
-        intervalId = setInterval(timerRun, 1000);
+        intervalId2 = setInterval(timerRun, 1000);
         timerRunning = true;
     }
 }
 
 function timerReset() {
-    clearInterval(intervalId);
+    clearInterval(intervalId2);
     time = 15;
     timerRunning = false;
 }
