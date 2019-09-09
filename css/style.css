@@ -2,9 +2,12 @@ body{
     background-image: url("../assets/images/background.jpg");
     background-size: cover;
 }
+p,h1,h2,h3,h4,h5{
+    color:white;
+}
 
 .container{
     background-color: aliceblue;
-    height: 65vh;
+    height: 67vh;
     opacity: 0.9;
 }

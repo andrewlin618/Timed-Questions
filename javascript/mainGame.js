@@ -13,19 +13,18 @@ var losses = 0;
 var indexNow = 1;
 
 var started = false;
-var timerRunning = false;
 
-var intervalId;
 
 //Game instruction page;
-$("#answer-cg").text(title)
-$("#answer-text").text(qaBank[0]);
+$("#question-number").html(title)
+$("#answer-text").html(instruction);
+$("#timer").html("Timer<BR>00 : " + time);
+$("#losses-count").html("Correct : 0<br>Wrong : " + losses);
 
 //Start the game;
 setTimeout(function () {
-    $("#losses-count").html("Wins : 0<br>Losses : " + losses);
     setGame(indexNow);
-}, TIMEOUT);
+}, 3 * TIMEOUT);
 
 
 $(".answers").on("click", function () {

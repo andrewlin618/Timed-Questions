@@ -29,30 +29,30 @@
     </div>
 
     <!-- main-container -->
-    <div id="main-container" class="container rounded-lg bg-light">
-        <div class="row h-50">
+    <div id="main-container" class="container rounded-lg bg-dark">
+        <div class="row h-50 my-auto">
             <!-- timer -->
-            <div class="col-md-3 text-center">
-                <h1 class="mt-3">Timer:</h1>
-                <h1 id="timer"></h1>
+            <div class="col-md-3 text-center my-auto">
+                <h4 id="timer"></h4>
             </div>
             <!-- question -->
-            <div id="question-body" class="col-md-9">
-                <h2 id="question-number" class="mt-3"></h2><hr>
-                <p id="question" class="m-2 m-auto"></p>
-            </div>–
+            <div id="question-body" class="col-md-9 my-auto text-center">
+                <h4 id="question-number" class=""></h4>
+                <hr>
+                <p id="question"></p>
+            </div>
         </div>
         <div class="row h-50">
-            <div class="col-md-3">
-                <h3 id="losses-count"></h3>
+            <div class="col-md-3 text-center">
+                <h5 id="losses-count"></h5>
             </div>
-            <div id="answers-body" class="col-md-6 d-none">
-                <button id="answer-a" type="button" class="answers btn btn-outline-dark w-100" answerName="a"></button><br>
-                <button id="answer-b" type="button" class="answers btn btn-outline-dark w-100" answerName="b"></button><br>
-                <button id="answer-c" type="button" class="answers btn btn-outline-dark w-100" answerName="c"></button><br>
-                <button id="answer-d" type="button" class="answers btn btn-outline-dark w-100" answerName="d"></button>
+            <div id="answers-body" class="col-md-9 text-center d-none">
+                <button id="answer-a" type="button" class="answers btn btn-dark" answerName="a"></button><br>
+                <button id="answer-b" type="button" class="answers btn btn-dark" answerName="b"></button><br>
+                <button id="answer-c" type="button" class="answers btn btn-dark" answerName="c"></button><br>
+                <button id="answer-d" type="button" class="answers btn btn-dark" answerName="d"></button>
             </div>
-            <div id="answer-body" class="col-md-6">
+            <div id="answer-body" class="col-md-9 text-center">
                 <h3 id="answer-cg"></h3> 
                 <p id="answer-text"></p>
             </div>
@@ -60,7 +60,7 @@
     </div>
 
     <br><br>
-    <footer class="bg-dark text-light text-center" style="height: 8vh; width:100%">
+    <footer class="bg-dark text-light text-center fixed-bottom" style="height: 8vh; width:100%">
         <p>Copyright</p>
     </footer>
 

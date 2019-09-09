@@ -1,4 +1,6 @@
 var time = 15;
+var timerRunning = false;
+var intervalId;
 
 function setGame(index) {
     timerRestart();
@@ -23,12 +25,11 @@ function setGame(index) {
 
 function timerRestart() {
     if (!timerRunning) {
-        $("#timer").text("00 : 15");
+        $("#timer").html("Timer<BR>00 : " + time);
         intervalId = setInterval(timerRun, 1000);
         timerRunning = true;
     }
 }
-ÏÏ
 
 function timerReset() {
     clearInterval(intervalId);
@@ -36,13 +37,12 @@ function timerReset() {
     timerRunning = false;
 }
 
-
 function timerRun() {
     time--;
     if (time > 9) {
-        $("#timer").text("00 : " + time);
+        $("#timer").html("Timer<BR>00 : " + time);
     } else if (time >= 0) {
-        $("#timer").text("00 : 0" + time);
+        $("#timer").html("Timer<BR>00 : 0" + time);
     } else {
         wrong();
         if (losses == 3) {
@@ -68,14 +68,13 @@ function timerRun() {
     }
 }
 
-
 function correct() {
     $("#answers-body").addClass("d-none");
     $("#answer-body").removeClass("d-none");
     $("#answer-cg").css("color", "green");
     $("#answer-cg").text("Congratulations!")
     win++;
-    $("#losses-count").html("Wins : " + (indexNow - losses) + "<br>Losses : " + losses);
+    $("#losses-count").html("Correct : " + (indexNow - losses) + "<br>Wrong : " + losses);
     timerReset();
 }
 
@@ -85,19 +84,22 @@ function wrong() {
     $("#answer-cg").css("color", "red");
     $("#answer-cg").text("Sorry....!")
     losses++;
-    $("#losses-count").html("Wins : " + (indexNow - losses) + "<br>Losses : " + losses);
+    $("#losses-count").html("Correct : " + (indexNow - losses) + "<br>Wrong : " + losses);
     timerReset();
 }
 
 function gameOver() {
-    $("#answer-cg").text("You are not a fan of The One Piece!");
-    $("#answer-text").text("Refresh to restart!");
+    $("#question-number").css("color", "red");
+    $("#question-number").text("Game over!");
+    $("#question").text(gameOverWords);
+    $("#answer-text").text("Refresh to play again");
     timerReset();
 }
 
 function showResult() {
-    $("#answer-cg").css("color", "green");
-    $("#answer-cg").text("You are a fan of The One Piece!");
-    $("#answer-text").text("Correct = " + (10 - losses));
+    $("#question-number").css("color", "green");
+    $("#question-number").text("WIN!");
+    $("#question").html(celebrationWords);
+    $("#answer-text").text("Refresh to play again");
     timerReset();
 }

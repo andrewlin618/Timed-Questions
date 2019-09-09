@@ -1,5 +1,7 @@
-var title = "海贼王趣味问答题"
-var instruction = "下面一共有10道关于海贼王的问题，答错3题则游戏结束"
+var title = "【海贼王趣味问答题】"
+var instruction = "——下面一共有10道关于海贼王的问题，答错3题则游戏结束——"
+var celebrationWords = "You are  a fan of The One Piece!"
+var gameOverWords = "You are not a fan of The One Piece!";
 
 var qa1 = {
     question:"绿藻头索大全名叫（ ）",
@@ -10,7 +12,7 @@ var qa1 = {
 var qa2 = {
     question: "罗最常使用的战术是（ ）",
     answer:['A.外科手术', 'B.动感光波', 'C.屠宰场', 'D.剑术'],
-    correctAnswer:["c","罗最常使用的战术是（C.屠宰场 ）"],
+    correctAnswer:["c","罗最常使用的战术是（屠宰场 ）"],
 }
 
 var qa3 = {
