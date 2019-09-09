@@ -63,14 +63,14 @@ $(".answers").on("click", function () {
     indexNow++;
     if (indexNow == 11) {
         setTimeout(function () {
-            clearInterval(intervalId);
+            clearInterval(intervalId2);
             showResult();
         }, TIMEOUT);
 
         //Next question;
     } else {
         setTimeout(function () {
-            clearInterval(intervalId);
+            clearInterval(intervalId2);
             setGame(indexNow);
         }, TIMEOUT);
     }
